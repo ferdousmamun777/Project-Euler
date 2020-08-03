@@ -1,0 +1,21 @@
+list=[]
+s=""
+for i in range(900, 1000):
+    for j in range(900, 1000):
+        s=i*j
+        list.append(s)
+
+def pal(n):
+    sum=0
+    while n!=0:
+        a=n%10
+        sum=sum*10+a
+        n=n//10
+
+    return sum
+list2=[]
+for i in list:
+    if i==pal(i):
+        list2.append(i)
+
+print(max(list2))
