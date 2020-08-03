@@ -1,0 +1,12 @@
+for a in range(2,1000):
+    for b in range(2,1000):
+        c = (a**2) + (b**2)
+        c = (c**0.5)
+        total = a+b+c
+        if c == int(c):
+            if total == 1000:
+                product = (a*b*c)
+                print(a)
+                print(b)
+                print(c)
+                print(product)
