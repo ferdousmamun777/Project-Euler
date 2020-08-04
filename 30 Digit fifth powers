@@ -1,0 +1,15 @@
+def power(n):
+    sum=0
+    while n!=0:
+        a=n%10
+        sum=sum+(a**5)
+        b=n//10
+        n=b
+    return sum
+
+list=[]
+for i in range(2, 200000):
+    if i==power(i):
+        list.append(i)
+
+print(sum(list))
