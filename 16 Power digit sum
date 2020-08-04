@@ -1,0 +1,12 @@
+def s(n):
+    sum=0
+    while n!=0:
+        a=n%10
+        sum=sum+a
+        b=n//10
+        n=b
+    return sum
+
+a=2**1000
+
+print(s(a))
