@@ -1,0 +1,32 @@
+def binary(n):
+    sum=""
+    while n!=0:
+        a=n%2
+        a=str(a)
+        sum=sum +a
+        b=n//2
+        n=b
+    return sum
+
+
+
+def reverse(n):
+    sum=0
+    while n!=0:
+        a = n % 10
+        sum = sum * 10 + a
+        b = n // 10
+        n = b
+
+    return sum
+
+def revb(s):
+
+    return s[::-1]
+
+list=[]
+for i in range(1, 1000000):
+    if i==reverse(i) and binary(i)==revb(binary(i)):
+        list.append(i)
+
+print(sum(list))
