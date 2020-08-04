@@ -1,0 +1,30 @@
+def amicable(n):
+    list=[]
+    list2=[]
+
+    for i in range(1, n):
+        if n%i==0:
+            list.append(i)
+    a=sum(list)
+
+
+
+    for j in range(1, a):
+        if a%j==0:
+            list2.append(j)
+    b=sum(list2)
+
+
+    if a!=b and b==n:
+        return True
+    return False
+
+list3=[]
+for i in range(1, 10000):
+    if amicable(i)==True:
+        list3.append(i)
+
+print(list3)
+print(sum(list3))
+
+
