@@ -1,0 +1,18 @@
+def dg(n):
+    sum=0
+    while n!=0:
+        a=n%10
+        sum=sum+a
+        b=n//10
+        n=b
+    return sum
+
+list=[]
+
+for i in range(9, 100):
+    for j in range(9, 100):
+        a=i**j
+        b=dg(a)
+        list.append(b)
+
+print(max(list))
